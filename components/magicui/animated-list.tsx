@@ -18,7 +18,7 @@ export const AnimatedList = React.memo(
         // Memoize childrenArray to prevent resetting useMemo dependency on every render
         const childrenArray = useMemo(() => React.Children.toArray(children), [children]);
 
-        // Reset index when children change
+        // Reset index when children change.
         useEffect(() => {
             setIndex(0);
         }, [childrenArray]);
